@@ -3,7 +3,7 @@ import socket
 sock_server = socket.socket()
 sock_server.bind(('localhost', 8001))
 
-sock_server.listen()
+sock_server.listen(1)
 
 conn, addr = sock_server.accept()
 while True:
