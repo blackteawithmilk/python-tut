@@ -5,10 +5,10 @@ sock_server.bind(('localhost', 8001))
 
 sock_server.listen()
 
-sock_conn, addr = sock_server.accept()
-
-recv_data = sock_conn.recv(1024)
-print(recv_data)
-sock_conn.send("connection checked".encode().upper())
+conn, addr = sock_server.accept()
+while True:
+    recv_data = conn.recv(1024).decode()
+    print(recv_data)
+    conn.send("connection checked".encode().upper())
 
 sock_server.close()
