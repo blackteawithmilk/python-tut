@@ -9,6 +9,6 @@ sock_conn, addr = sock_server.accept()
 
 recv_data = sock_conn.recv(1024)
 print(recv_data)
-sock_conn.send(b"connection checked".upper())
+sock_conn.send("connection checked".encode().upper())
 
 sock_server.close()
