@@ -8,7 +8,7 @@ while True:
     if len(msg) == 0:
         break
     sock_client.send("checking connection.".encode().upper())
-    sock_client.send(msg)
+    sock_client.send(msg.encode())
     recv_data = sock_client.recv(1024).decode()
     print("Client Recv: "+recv_data)
 

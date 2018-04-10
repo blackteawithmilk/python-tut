@@ -8,7 +8,7 @@ sock_server.listen(1)
 
 while True:
     conn, addr = sock_server.accept()
-    print("Client from"+addr+" connected\n")
+    print("Client from "+str(addr[0])+":"+str(addr[1])+" connected\n")
     while True:
         recv_data = conn.recv(1024).decode()
         print("Server Recv: "+recv_data)
