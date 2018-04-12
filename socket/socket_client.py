@@ -1,7 +1,7 @@
 import socket
 
 sock_client = socket.socket()
-sock_client.connect(('localhost', 8001))
+sock_client.connect(('127.0.0.1', 8001))
 
 while True:
     msg = input("input>>").strip()
